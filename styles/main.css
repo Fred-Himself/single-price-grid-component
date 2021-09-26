@@ -30,7 +30,8 @@ main {
 #gridContainer {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: 'a a' 'b c';
+      grid-template-areas: 'a a'
+ 'b c';
   -ms-grid-columns: 50% 50%;
       grid-template-columns: 50% 50%;
   width: 100%;
@@ -147,9 +148,11 @@ section h3 {
   color: #3e52a3;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 720px) {
   #gridContainer {
-        grid-template-areas: 'a' 'b' 'c';
+        grid-template-areas: 'a'
+ 'b'
+ 'c';
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
     margin: 72px auto;
