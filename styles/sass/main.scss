@@ -1,0 +1,197 @@
+// ------------ VARIABLES
+
+$cyan: hsl(179, 62%, 43%);
+$brightYellow: hsl(71, 73%, 54%);
+$lightGray: hsl(204, 43%, 93%);
+$grayishBlue: hsl(218, 22%, 67%);
+$color1: hsl(179, 47%, 52%);
+
+$maxSize: 1000px;
+
+// ------------ GENERAL STYLE
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  background-color: $lightGray;
+  font: 400 16px 'Karla', sans-serif;
+  letter-spacing: -0.2px;
+  width: 100%;
+  height: 100%;
+}
+
+a, a:visited, a:hover {
+  text-decoration: none;
+}
+
+// ------------ GRID
+
+main {
+  padding: 0 22px;
+}
+
+#gridContainer {
+  display: grid;
+  grid-template-areas:
+    'a a'
+    'b c';
+  grid-template-columns: 50% 50%;
+  width: 100%;
+  max-width: 635px;
+  margin: 163px auto;
+  border-radius: 8px;
+  box-shadow: 0 10px 24px rgba($grayishBlue, 0.5);
+  overflow: hidden;
+}
+
+section {
+  padding: 40px;
+
+  h3 {
+    font-size: 18px;
+    margin-bottom: 16px;
+    color: $lightGray;
+  }
+}
+
+#introCard {
+  background-color: rgb(255, 255, 255);
+  grid-area: a;
+
+  h1 {
+    margin-bottom: 22px;
+    color: $cyan;
+  }
+
+  h2 {
+    font-size: 18px;
+    margin-bottom: 12px;
+    color: $brightYellow;
+  }
+
+  p {
+    line-height: 26px;
+    color: $grayishBlue;
+  }
+}
+
+#subscriptionCard {
+  grid-area: b;
+  background-color: $cyan;
+
+  .price {
+    display: flex;
+    align-items: center;
+    color: rgba($lightGray, 0.5);
+  }
+
+  span {
+    font-size: 32px;
+    font-weight: 700;
+    margin-right: 12px;
+    color: $lightGray;
+  }
+
+  p {
+    line-height: 34px;
+    color: $lightGray;
+  }
+
+  button {
+    background-color: $brightYellow;
+    font-size: 15px;
+    font-weight: 700;
+    width: 100%;
+    margin-top: 22px;
+    padding: 16px 0;
+    color: $lightGray;
+    border: 0;
+    border-radius: 6px;
+    box-shadow: 0 4px 18px rgba(#000, 0.2);
+    cursor: pointer;
+  }
+}
+
+#whyusCard {
+  grid-area: c;
+  background-color: lighten($cyan, 10%);
+
+  ul {
+    list-style: none;
+    margin-top: 18px;
+
+    li {
+      font-size: 14px;
+      margin-bottom: 3px;
+      color: rgba($lightGray, 0.5);
+    }
+  }
+}
+
+// ------------ ATTRIBUTION
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}
+
+// ------------ MEDIA QUERIES
+
+@media(max-width: $maxSize) {
+
+  #gridContainer {
+    grid-template-areas:
+      'a'
+      'b'
+      'c';
+    grid-template-columns: 100%;
+    margin: 72px auto;
+  }
+
+  section {
+    padding: 0;
+  }
+
+  #introCard {
+    grid-area: a;
+    padding: 27px 24px 30px;
+
+    h1 {
+      font-size: 20px;
+      margin-bottom: 26px;
+    }
+  
+    h2 {
+      font-size: 15px;
+      margin-bottom: 20px;
+    }
+  
+    p {
+      font-size: 14px;
+    }
+  }
+  
+  #subscriptionCard {
+    grid-area: b;
+    padding: 25px 24px 23px;
+  }
+  
+  #whyusCard {
+    grid-area: c;
+    padding: 24px 24px 22px;
+  }
+
+}
