@@ -1,0 +1,190 @@
+html {
+  font-size: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  background-color: #e5eff5;
+  font: 400 16px 'Karla', sans-serif;
+  letter-spacing: -0.2px;
+  width: 100%;
+  height: 100%;
+}
+
+a, a:visited, a:hover {
+  text-decoration: none;
+}
+
+main {
+  padding: 0 22px;
+}
+
+#gridContainer {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'a a' 'b c';
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  width: 100%;
+  max-width: 635px;
+  margin: 163px auto;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 10px 24px rgba(152, 166, 189, 0.5);
+          box-shadow: 0 10px 24px rgba(152, 166, 189, 0.5);
+  overflow: hidden;
+}
+
+section {
+  padding: 40px;
+}
+
+section h3 {
+  font-size: 18px;
+  margin-bottom: 16px;
+  color: #e5eff5;
+}
+
+#introCard {
+  background-color: white;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: a;
+}
+
+#introCard h1 {
+  margin-bottom: 22px;
+  color: #2ab2af;
+}
+
+#introCard h2 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: #c0df34;
+}
+
+#introCard p {
+  line-height: 26px;
+  color: #98a6bd;
+}
+
+#subscriptionCard {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: b;
+  background-color: #2ab2af;
+}
+
+#subscriptionCard .price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: rgba(229, 239, 245, 0.5);
+}
+
+#subscriptionCard span {
+  font-size: 32px;
+  font-weight: 700;
+  margin-right: 12px;
+  color: #e5eff5;
+}
+
+#subscriptionCard p {
+  line-height: 34px;
+  color: #e5eff5;
+}
+
+#subscriptionCard button {
+  background-color: #c0df34;
+  font-size: 15px;
+  font-weight: 700;
+  width: 100%;
+  margin-top: 22px;
+  padding: 16px 0;
+  color: #e5eff5;
+  border: 0;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 4px 18px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 18px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+#whyusCard {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: c;
+  background-color: #3dd1cf;
+}
+
+#whyusCard ul {
+  list-style: none;
+  margin-top: 18px;
+}
+
+#whyusCard ul li {
+  font-size: 14px;
+  margin-bottom: 3px;
+  color: rgba(229, 239, 245, 0.5);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+@media (max-width: 1000px) {
+  #gridContainer {
+        grid-template-areas: 'a' 'b' 'c';
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    margin: 72px auto;
+  }
+  section {
+    padding: 0;
+  }
+  #introCard {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: a;
+    padding: 27px 24px 30px;
+  }
+  #introCard h1 {
+    font-size: 20px;
+    margin-bottom: 26px;
+  }
+  #introCard h2 {
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+  #introCard p {
+    font-size: 14px;
+  }
+  #subscriptionCard {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: b;
+    padding: 25px 24px 23px;
+  }
+  #whyusCard {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: c;
+    padding: 24px 24px 22px;
+  }
+}
+/*# sourceMappingURL=main.css.map */
